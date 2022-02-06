@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="desktop-demo-jvm-2022.2.6">
+    <output-path>$PROJECT_DIR$/desktop-demo/build/libs</output-path>
+    <root id="archive" name="desktop-demo-jvm-2022.2.6.jar">
+      <element id="module-output" name="paper-ui.desktop-demo.jvmMain" />
+    </root>
+  </artifact>
+</component>

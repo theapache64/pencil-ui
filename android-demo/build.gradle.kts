@@ -15,7 +15,7 @@ dependencies {
 android {
     compileSdk = 31
     defaultConfig {
-        applicationId = "com.github.theapache64.paperui.android"
+        applicationId = "com.github.theapache64.paperui.demoandroid"
         minSdk = 24
         targetSdk = 31
         versionCode = 1
