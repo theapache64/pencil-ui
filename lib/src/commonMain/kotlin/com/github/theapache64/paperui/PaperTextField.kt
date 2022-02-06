@@ -1,4 +1,4 @@
-package com.github.theapache64.paperui.common
+package com.github.theapache64.paperui
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
@@ -10,6 +10,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -29,7 +31,9 @@ fun PaperTextField(
                 color = Color.Black,
                 shape = HandDrawnRectangleShape
             )
-            .padding(10.dp)
+            .padding(10.dp),
+            textStyle = TextStyle.Default.copy(fontFamily = FontFamily(getFont()))
+
     )
 }
 
