@@ -7,12 +7,14 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import com.github.theapache64.paperui.ui.PaperUiTheme
 import kotlin.math.absoluteValue
 
-class HandDrawnRectangle : Shape {
+internal class HandDrawnRectangle : Shape {
     companion object {
-        val curveDpRange = (-7..7).filter { it.absoluteValue > 1 }
+        val curveDpRange = (-7..7).filter { it.absoluteValue > 4 }
         val curveAtPerc = (30..70)
+
     }
 
     private val topCurveRange = curveDpRange.random().dp.value

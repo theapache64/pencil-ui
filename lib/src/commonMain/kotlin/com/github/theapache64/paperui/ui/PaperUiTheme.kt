@@ -3,22 +3,31 @@ package com.github.theapache64.paperui.ui
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 import com.github.theapache64.paperui.ui.common.*
-import com.github.theapache64.paperui.ui.common.LocalPaperUiColors
-import com.github.theapache64.paperui.ui.common.LocalPaperUiDimens
 
 
 @Composable
 fun PaperUiTheme(
-    content: @Composable () -> Unit
+    typography: Typography = Typography(
+        defaultFontFamily = Fonts.sweetHeart()
+    ),
+    colors: PaperUiColors = PaperUiTheme.color,
+    dimens: PaperUiDimens = PaperUiTheme.dimens,
+    devConfig: PaperUiDevConfig = PaperUiTheme.dev,
+    content: @Composable () -> Unit,
 ) {
-    MaterialTheme(
-        content = content,
-        typography = Typography(
-            defaultFontFamily = Fonts.sweetHeart()
+    CompositionLocalProvider(
+        LocalPaperUiColors provides colors,
+        LocalPaperUiDimens provides dimens,
+        LocalPaperUiDevConfig provides devConfig,
+    ){
+        MaterialTheme(
+            content = content,
+            typography = typography
         )
-    )
+    }
 }
 
 object PaperUiTheme {
@@ -31,4 +40,9 @@ object PaperUiTheme {
         @Composable
         @ReadOnlyComposable
         get() = LocalPaperUiColors.current
+
+    val dev: PaperUiDevConfig
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalPaperUiDevConfig.current
 }

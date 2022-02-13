@@ -17,10 +17,13 @@ import com.github.theapache64.paperui.ui.PaperButton
 import com.github.theapache64.paperui.ui.PaperText
 import com.github.theapache64.paperui.ui.PaperTextField
 import com.github.theapache64.paperui.ui.PaperUiTheme
+import com.github.theapache64.paperui.ui.common.PaperUiDevConfig
 
 @Composable
 fun CommonDemo() {
-    PaperUiTheme {
+    PaperUiTheme(
+        devConfig = PaperUiDevConfig(debug = false)
+    ) {
         LazyColumn(
             modifier = Modifier.padding(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally,

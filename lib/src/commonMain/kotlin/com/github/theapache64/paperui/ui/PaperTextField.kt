@@ -1,5 +1,6 @@
 package com.github.theapache64.paperui.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.BasicTextField
@@ -29,11 +30,16 @@ fun PaperTextField(
     BasicTextField(
         value = value,
         onValueChange = onValueChange,
-        modifier = modifier.border(
-            width = borderWidth,
-            color = borderColor,
-            shape = borderShape
-        ).padding(innerPadding),
+        modifier = modifier
+            .ifTrue(PaperUiTheme.dev.debug) {
+                background(Color.Red)
+            }
+            .border(
+                width = borderWidth,
+                color = borderColor,
+                shape = borderShape
+            )
+            .padding(innerPadding),
         textStyle = textStyle.copy(fontSize = fontSize),
     )
 }
