@@ -1,5 +1,6 @@
 package com.github.theapache64.paperui.ui
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
@@ -9,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
@@ -26,7 +28,8 @@ fun PaperTextField(
     innerPadding: Dp = PaperUiTheme.dimens.textFieldInnerPadding,
     textStyle: TextStyle = MaterialTheme.typography.body1
 ) {
-    val borderShape = remember { HandDrawnRectangle() }
+    val density = LocalDensity.current
+    val borderShape = remember { HandDrawnRectangle(density) }
     BasicTextField(
         value = value,
         onValueChange = onValueChange,
@@ -35,8 +38,7 @@ fun PaperTextField(
                 background(Color.Red)
             }
             .border(
-                width = borderWidth,
-                color = borderColor,
+                border = BorderStroke(borderWidth, borderColor),
                 shape = borderShape
             )
             .padding(innerPadding),

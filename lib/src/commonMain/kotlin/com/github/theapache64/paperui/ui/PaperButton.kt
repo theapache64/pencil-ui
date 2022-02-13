@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.github.theapache64.paperui.ui.common.HandDrawnRectangle
@@ -30,7 +31,8 @@ fun PaperButton(
     borderWidth: Dp = PaperUiTheme.dimens.borderWidth,
     backgroundColor: Color = PaperUiTheme.color.buttonBgColor
 ) {
-    val handDrawnRectangle = remember { HandDrawnRectangle() }
+    val density = LocalDensity.current
+    val handDrawnRectangle = remember { HandDrawnRectangle(density) }
     TextButton(
         onClick,
         modifier = modifier
