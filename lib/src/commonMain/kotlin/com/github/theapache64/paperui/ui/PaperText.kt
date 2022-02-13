@@ -1,4 +1,4 @@
-package com.github.theapache64.paperui
+package com.github.theapache64.paperui.ui
 
 import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.Text

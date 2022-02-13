@@ -6,6 +6,7 @@ import com.github.theapache64.paperui.common.CommonDemo
 
 fun main() = application {
     Window(
+        title = "Paper UI Demo - Desktop",
         onCloseRequest = ::exitApplication,
         state = WindowState(
             width = 400.dp,

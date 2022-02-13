@@ -13,10 +13,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.github.theapache64.paperui.PaperButton
-import com.github.theapache64.paperui.PaperText
-import com.github.theapache64.paperui.PaperTextField
-import com.github.theapache64.paperui.PaperUiTheme
+import com.github.theapache64.paperui.ui.PaperButton
+import com.github.theapache64.paperui.ui.PaperText
+import com.github.theapache64.paperui.ui.PaperTextField
+import com.github.theapache64.paperui.ui.PaperUiTheme
 
 @Composable
 fun CommonDemo() {
