@@ -5,7 +5,11 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -26,8 +30,8 @@ fun CommonDemo() {
                 PaperText("Paper UI Demo")
             }
 
-            items(3) {
-                var value by remember { mutableStateOf("field $it") }
+            items(1) {
+                var value by rememberSaveable { mutableStateOf("") }
                 PaperTextField(
                     value = value,
                     onValueChange = {
@@ -41,7 +45,7 @@ fun CommonDemo() {
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                 ) {
-                    repeat(3){
+                    repeat(3) {
                         PaperButton(
                             onClick = {
 

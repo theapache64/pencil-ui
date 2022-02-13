@@ -20,18 +20,18 @@ fun PaperButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true
 ) {
-    val handDrawnRectangleShape = remember { HandDrawnRectangleShape() }
+    val handDrawnRectangle = remember { HandDrawnRectangle() }
     TextButton(
         onClick,
         modifier = modifier
             .padding(
-                start = handDrawnRectangleShape.leftGravity.absoluteValue.dp,
-                end = handDrawnRectangleShape.rightGravity.absoluteValue.dp,
-                top = handDrawnRectangleShape.topGravity.absoluteValue.dp,
-                bottom = handDrawnRectangleShape.bottomGravity.absoluteValue.dp,
+                start = handDrawnRectangle.leftCurveRange.absoluteValue.dp,
+                end = handDrawnRectangle.rightCurveRange.absoluteValue.dp,
+                top = handDrawnRectangle.topCurveRange.absoluteValue.dp,
+                bottom = handDrawnRectangle.bottomCurveRange.absoluteValue.dp,
             )
-            .border(BorderStroke(2.dp, Color.Black), handDrawnRectangleShape)
-            .background(Color(0xffcccccc), handDrawnRectangleShape)
+            .border(BorderStroke(2.dp, Color.Black), handDrawnRectangle)
+            .background(Color(0xffcccccc), handDrawnRectangle)
             ,
         enabled = enabled,
         content = {

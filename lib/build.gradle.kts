@@ -38,6 +38,7 @@ kotlin {
             }
         }
         val desktopMain by getting {
+            resources.srcDirs("src/commonMain/resources")
             dependencies {
                 api(compose.preview)
             }
@@ -48,7 +49,10 @@ kotlin {
 
 android {
     compileSdk= 31
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+    sourceSets["main"].apply {
+        manifest.srcFile("src/androidMain/AndroidManifest.xml")
+        res.srcDirs("src/androidMain/res", "src/commonMain/resources")
+    }
     defaultConfig {
         minSdk= 24
         targetSdk= 31
