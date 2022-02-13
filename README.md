@@ -2,22 +2,28 @@
 
 # paper-ui
 
-![buildStatus](https://img.shields.io/github/workflow/status/theapache64/paper-ui/Java%20CI%20with%20Gradle?style=plastic)
-![latestVersion](https://img.shields.io/github/v/release/theapache64/paper-ui)
-<a href="https://twitter.com/theapache64" target="_blank">
-<img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
+![buildStatus](https://img.shields.io/github/workflow/status/ENTER_YOUR_GITHUB_USERNAME_HERE/paper-ui/Java%20CI%20with%20Gradle?style=plastic)
+![latestVersion](https://img.shields.io/github/v/release/ENTER_YOUR_GITHUB_USERNAME_HERE/paper-ui)
+<a href="https://twitter.com/ENTER_YOUR_TWITTER_USERNAME_HERE" target="_blank">
+<img alt="Twitter: ENTER_YOUR_TWITTER_USERNAME_HERE" src="https://img.shields.io/twitter/follow/ENTER_YOUR_TWITTER_USERNAME_HERE.svg?style=social" />
 </a>
 
 > A Multiplatform Compose Theme for your Compose app
 
 Coming soon
 
+## 🏗 Project Status
+
+|![](https://i.giphy.com/media/tl9tKCyXYBt6A3GweC/giphy.gif) |
+|:--:|
+| Under construction |
+
 ## ✍️ Author
 
-👤 **theapache64**
+👤 **ENTER_YOUR_NAME**
 
-* Twitter: <a href="https://twitter.com/theapache64" target="_blank">@theapache64</a>
-* Email: theapache64@gmail.com
+* Twitter: <a href="https://twitter.com/ENTER_YOUR_TWITTER_USERNAME_HERE" target="_blank">@ENTER_YOUR_TWITTER_USERNAME_HERE</a>
+* Email: ENTER_YOUR_EMAIL_HERE
 
 Feel free to ping me 😉
 
@@ -39,15 +45,15 @@ Please make sure to update tests as appropriate.
 
 Give a ⭐️ if this project helped you!
 
-<a href="https://www.patreon.com/theapache64">
+<a href="https://www.patreon.com/ENTER_YOUR_PATRON_USERNAME">
   <img alt="Patron Link" src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"/>
 </a>
 
-<a href="https://www.buymeacoffee.com/theapache64" target="_blank">
+<a href="https://www.buymeacoffee.com/ENTER_BMC_USERNAME" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="160">
 </a>
 
-<a href="https://www.paypal.me/theapache64" target="_blank">
+<a href="https://www.paypal.me/ENTER_YOUR_PAYPAL_USERNAME" target="_blank">
     <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donation" width="160">
 </a>
 
@@ -58,7 +64,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 ```
-Copyright © 2022 - theapache64
+Copyright © 2022 - ENTER_YOUR_NAME
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
