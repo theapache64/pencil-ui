@@ -7,7 +7,7 @@ pluginManagement {
     }
     
 }
-rootProject.name = "paper-ui"
+rootProject.name = "pencil-ui"
 
 include(":android-demo")
 include(":desktop-demo")

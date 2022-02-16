@@ -2,7 +2,7 @@
   <artifact type="jar" name="lib-desktop-2022.2.6">
     <output-path>$PROJECT_DIR$/lib/build/libs</output-path>
     <root id="archive" name="lib-desktop-2022.2.6.jar">
-      <element id="module-output" name="paper-ui.lib.desktopMain" />
+      <element id="module-output" name="pencil-ui.lib.desktopMain" />
     </root>
   </artifact>
 </component>

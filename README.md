@@ -1,6 +1,6 @@
 ![](cover.jpeg)
 
-# paper-ui (WIP)
+# pencil-ui (WIP)
 
 
 
@@ -8,8 +8,8 @@ https://user-images.githubusercontent.com/9678279/153767264-90c6ef37-4279-4709-a
 
 
 
-![buildStatus](https://img.shields.io/github/workflow/status/theapache64/paper-ui/Java%20CI%20with%20Gradle?style=plastic)
-![latestVersion](https://img.shields.io/github/v/release/theapache64/paper-ui)
+![buildStatus](https://img.shields.io/github/workflow/status/theapache64/pencil-ui/Java%20CI%20with%20Gradle?style=plastic)
+![latestVersion](https://img.shields.io/github/v/release/theapache64/pencil-ui)
 <a href="https://twitter.com/theapache64" target="_blank">
 <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
 </a>

@@ -4,7 +4,7 @@ plugins {
     kotlin("android")
 }
 
-group = "com.github.theapache64.paperui"
+group = "com.github.theapache64.pencilui"
 version = "2022.2.6"
 
 dependencies {
@@ -15,7 +15,7 @@ dependencies {
 android {
     compileSdk = 31
     defaultConfig {
-        applicationId = "com.github.theapache64.paperui.demoandroid"
+        applicationId = "com.github.theapache64.pencilui.demoandroid"
         minSdk = 24
         targetSdk = 31
         versionCode = 1

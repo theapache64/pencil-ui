@@ -2,7 +2,7 @@
   <artifact type="jar" name="common-demo-desktop-2022.2.6">
     <output-path>$PROJECT_DIR$/common-demo/build/libs</output-path>
     <root id="archive" name="common-demo-desktop-2022.2.6.jar">
-      <element id="module-output" name="paper-ui.common-demo.desktopMain" />
+      <element id="module-output" name="pencil-ui.common-demo.desktopMain" />
     </root>
   </artifact>
 </component>

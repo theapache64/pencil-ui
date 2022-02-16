@@ -6,7 +6,7 @@ plugins {
     id("org.jetbrains.compose") version "1.2.0-alpha01-dev606"
 }
 
-group = "com.github.theapache64.paperui"
+group = "com.github.theapache64.pencilui"
 version = "2022.2.6"
 
 kotlin {

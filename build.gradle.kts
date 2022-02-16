@@ -10,7 +10,7 @@ buildscript {
     }
 }
 
-group = "com.github.theapache64.paperui"
+group = "com.github.theapache64.pencilui"
 version = "2022.2.6"
 
 allprojects {

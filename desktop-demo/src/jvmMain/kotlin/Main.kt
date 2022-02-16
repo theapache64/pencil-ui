@@ -2,11 +2,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.application
-import com.github.theapache64.paperui.common.CommonDemo
+import com.github.theapache64.pencilui.common.CommonDemo
 
 fun main() = application {
     Window(
-        title = "Paper UI Demo - Desktop",
+        title = "Pencil UI Demo - Desktop",
         onCloseRequest = ::exitApplication,
         state = WindowState(
             width = 400.dp,
