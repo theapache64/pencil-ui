@@ -48,14 +48,16 @@ fun CommonDemo() {
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                 ) {
-                    repeat(3) {
-                        PencilButton(
-                            onClick = {
+                    PencilButton(
+                        onClick = {},
+                        text = "Normal Button"
+                    )
 
-                            },
-                            text = "Button $it"
-                        )
-                    }
+                    PencilButton(
+                        onClick = {},
+                        text = "Disabled Button",
+                        enabled = false
+                    )
                 }
             }
         }

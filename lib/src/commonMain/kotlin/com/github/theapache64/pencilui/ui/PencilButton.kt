@@ -14,6 +14,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.github.theapache64.pencilui.ui.common.HandDrawnRectangle
+import com.github.theapache64.pencilui.ui.common.LocalPencilUiDevConfig
 
 inline fun Modifier.ifTrue(
     value: Boolean,
@@ -29,7 +30,13 @@ fun PencilButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     borderWidth: Dp = PencilUiTheme.dimens.borderWidth,
-    backgroundColor: Color = PencilUiTheme.color.buttonBgColor
+    textColor: Color = PencilUiTheme.color.contentColor,
+    disabledTextColor: Color = PencilUiTheme.color.disabledContentColor,
+    borderColor: Color = PencilUiTheme.color.borderColor,
+    disabledBorderColor: Color = PencilUiTheme.color.disabledBorderColor,
+    backgroundColor: Color = PencilUiTheme.color.buttonBgColor,
+    disabledBackgroundColor: Color = PencilUiTheme.color.disabledButtonBgColor,
+    rippleColor : Color = PencilUiTheme.color.rippleColor
 ) {
     val density = LocalDensity.current
     val handDrawnRectangle = remember { HandDrawnRectangle(density) }
@@ -37,18 +44,20 @@ fun PencilButton(
         onClick,
         modifier = modifier
             .ifTrue(PencilUiTheme.dev.debug) {
-                background(Color.Red)
+                background(LocalPencilUiDevConfig.current.debugColor)
             }
             .padding(all = (borderWidth.value * 2).dp)
-            .border(BorderStroke(borderWidth, Color.Black), handDrawnRectangle)
-            .background(backgroundColor, handDrawnRectangle)
-            ,
+            .border(
+                border = BorderStroke(width = borderWidth, color = if (enabled) borderColor else disabledBorderColor),
+                shape = handDrawnRectangle
+            )
+            .background(if (enabled) backgroundColor else disabledBackgroundColor, handDrawnRectangle),
         enabled = enabled,
         content = {
-            PencilText(text = text, color = Color.Black)
+            PencilText(text = text, color = if (enabled) textColor else disabledTextColor)
         },
         colors = ButtonDefaults.textButtonColors(
-            contentColor = Color.Black
+            contentColor = rippleColor
         )
     )
 }

@@ -6,7 +6,7 @@ import androidx.compose.ui.unit.dp
 
 data class PencilUiDimens(
     val borderWidth: Dp = 1.5.dp,
-    val textFieldInnerPadding: Dp = 15.dp
+    val textFieldInnerPadding: Dp = 15.dp,
 )
 
 internal val LocalPencilUiDimens = staticCompositionLocalOf {
