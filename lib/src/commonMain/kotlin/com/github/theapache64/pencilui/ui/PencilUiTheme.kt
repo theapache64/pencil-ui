@@ -19,7 +19,10 @@ fun PencilUiTheme(
         defaultFontFamily = Fonts.sweetHeart(),
         button = TextStyle(
             fontSize = 40.sp
-        )
+        ),
+        body1 = TextStyle(
+            fontSize = 40.sp
+        ),
     ),
     content: @Composable () -> Unit,
 ) {

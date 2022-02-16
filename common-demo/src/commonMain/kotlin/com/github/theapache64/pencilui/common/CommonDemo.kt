@@ -33,10 +33,11 @@ fun CommonDemo() {
                 PencilText("Pencil UI Demo")
             }
 
-            items(1) {
-                var value by rememberSaveable { mutableStateOf("") }
+            items(2) { index ->
+                var value by rememberSaveable { mutableStateOf("sss") }
                 PencilTextField(
                     value = value,
+                    enabled = index == 0,
                     onValueChange = {
                         value = it
                     },
