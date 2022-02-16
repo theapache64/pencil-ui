@@ -11,7 +11,6 @@ data class PencilUiColors(
     val disabledBorderColor: Color = borderColor.copy(alpha = disabledAlpha),
     val buttonBgColor: Color = Color(0xFFCCCCCC),
     val disabledButtonBgColor: Color = buttonBgColor.copy(alpha = disabledAlpha),
-    val rippleColor: Color = contentColor.copy(alpha = disabledAlpha)
 )
 
 internal val LocalPencilUiColors = staticCompositionLocalOf {

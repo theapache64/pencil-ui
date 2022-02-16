@@ -3,6 +3,7 @@ package com.github.theapache64.pencilui.ui
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.TextButton
@@ -25,7 +26,6 @@ inline fun Modifier.ifTrue(
 
 @Composable
 fun PencilButton(
-    text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
@@ -36,7 +36,7 @@ fun PencilButton(
     disabledBorderColor: Color = PencilUiTheme.color.disabledBorderColor,
     backgroundColor: Color = PencilUiTheme.color.buttonBgColor,
     disabledBackgroundColor: Color = PencilUiTheme.color.disabledButtonBgColor,
-    rippleColor : Color = PencilUiTheme.color.rippleColor
+    content: @Composable RowScope.() -> Unit
 ) {
     val density = LocalDensity.current
     val handDrawnRectangle = remember { HandDrawnRectangle(density) }
@@ -53,11 +53,10 @@ fun PencilButton(
             )
             .background(if (enabled) backgroundColor else disabledBackgroundColor, handDrawnRectangle),
         enabled = enabled,
-        content = {
-            PencilText(text = text, color = if (enabled) textColor else disabledTextColor)
-        },
+        content = content,
         colors = ButtonDefaults.textButtonColors(
-            contentColor = rippleColor
+            contentColor = textColor,
+            disabledContentColor = disabledTextColor
         )
     )
 }

@@ -50,14 +50,16 @@ fun CommonDemo() {
                 ) {
                     PencilButton(
                         onClick = {},
-                        text = "Normal Button"
-                    )
+                    ) {
+                        PencilText(text = "Normal Button")
+                    }
 
                     PencilButton(
                         onClick = {},
-                        text = "Disabled Button",
                         enabled = false
-                    )
+                    ) {
+                        PencilText(text = "Disabled Button")
+                    }
                 }
             }
         }
