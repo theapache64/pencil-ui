@@ -38,7 +38,6 @@ kotlin {
             }
         }
         val desktopMain by getting {
-            resources.srcDirs("src/commonMain/resources")
             dependencies {
                 api(compose.preview)
             }
