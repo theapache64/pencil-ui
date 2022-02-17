@@ -1,4 +1,3 @@
-![](cover.jpeg)
 
 # pencil-ui (WIP)
 
