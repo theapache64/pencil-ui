@@ -9,7 +9,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import kotlin.math.absoluteValue
 
-internal class HandDrawnRectangle(
+internal class PencilBorder(
     density: Density
 ) : Shape {
     companion object {

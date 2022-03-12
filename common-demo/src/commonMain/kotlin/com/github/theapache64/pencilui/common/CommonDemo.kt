@@ -1,9 +1,6 @@
 package com.github.theapache64.pencilui.common
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -21,11 +18,13 @@ import com.github.theapache64.pencilui.ui.common.PencilUiDevConfig
 
 @Composable
 fun CommonDemo() {
+    /*MyTest()
+    if (true) return*/
     PencilUiTheme(
         devConfig = PencilUiDevConfig(debug = false)
     ) {
         LazyColumn(
-            modifier = Modifier.padding(10.dp),
+            modifier = Modifier.padding(10.dp).fillMaxHeight(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
@@ -36,12 +35,9 @@ fun CommonDemo() {
             items(2) { index ->
                 var value by rememberSaveable { mutableStateOf("sss") }
                 PencilTextField(
-                    value = value,
-                    enabled = index == 0,
-                    onValueChange = {
+                    value = value, enabled = index == 0, onValueChange = {
                         value = it
-                    },
-                    modifier = Modifier.fillMaxWidth()
+                    }, modifier = Modifier.fillMaxWidth()
                 )
             }
 
@@ -56,8 +52,7 @@ fun CommonDemo() {
                     }
 
                     PencilButton(
-                        onClick = {},
-                        enabled = false
+                        onClick = {}, enabled = false
                     ) {
                         PencilText(text = "Disabled Button")
                     }

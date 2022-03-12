@@ -20,7 +20,8 @@ import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.Dp
-import com.github.theapache64.pencilui.ui.common.HandDrawnRectangle
+import com.github.theapache64.pencilui.ui.common.PencilBorder
+import com.github.theapache64.pencilui.util.addIf
 
 @Composable
 fun PencilTextField(
@@ -50,12 +51,12 @@ fun PencilTextField(
     ),
 ) {
     val density = LocalDensity.current
-    val borderShape = remember { HandDrawnRectangle(density) }
+    val borderShape = remember { PencilBorder(density) }
     BasicTextField(
         value = value,
         onValueChange = onValueChange,
         modifier = modifier
-            .ifTrue(PencilUiTheme.dev.debug) {
+            .addIf(PencilUiTheme.dev.debug) {
                 background(Color.Red)
             }
             .border(
