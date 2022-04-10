@@ -32,6 +32,7 @@ fun PencilButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    enableFireworkIndication: Boolean = false,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     elevation: ButtonElevation? = null,
     shape: Shape = MaterialTheme.shapes.small,
@@ -76,7 +77,7 @@ fun PencilButton(
             }
             .padding(all = (borderWidth.value * 2).dp)
             .background(if (enabled) backgroundColor else disabledBackgroundColor, pencilBorder)
-            .addIf(enabled) {
+            .addIf(enabled && enableFireworkIndication) {
                 indication(
                     interactionSource = interactionSource,
                     indication = remember { FireworkIndication() }
